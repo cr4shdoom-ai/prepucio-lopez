@@ -1,0 +1,263 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f0e9;
+    color: #292d25;
+}
+
+/* VIDEO DE FONDO */
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.filtro {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 25, 17, 0.55);
+    z-index: -1;
+}
+
+/* MENÚ HORIZONTAL */
+.menuH {
+    width: 100%;
+    background: rgba(20, 35, 25, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.menuH a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menuH a:hover {
+    background: #a58b55;
+    border-radius: 5px;
+}
+
+/* PORTADA */
+.portada {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.subtitulo {
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.portada h1 {
+    font-size: clamp(65px, 12vw, 120px);
+    letter-spacing: 12px;
+    text-shadow: 3px 3px 15px black;
+}
+
+.portada h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.portada p {
+    font-size: 17px;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.boton {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #a58b55;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #78643d;
+    transform: translateY(-3px);
+}
+
+/* DISTRIBUCIÓN DEL CONTENIDO */
+.contenedor {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1250px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* MENÚ VERTICAL */
+.menuV {
+    width: 230px;
+    flex-shrink: 0;
+    background: #263b2b;
+    padding: 25px 15px;
+    border-radius: 10px;
+    position: sticky;
+    top: 90px;
+}
+
+.menuV h3 {
+    color: #d8c393;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.menuV a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    transition: 0.3s;
+}
+
+.menuV a:hover {
+    background: #a58b55;
+    padding-left: 22px;
+    border-radius: 5px;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido {
+    flex: 1;
+    min-width: 0;
+}
+
+.seccion {
+    background: #fffefa;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    scroll-margin-top: 100px;
+}
+
+.etiqueta {
+    color: #927849;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.seccion h2 {
+    color: #294432;
+    font-size: 30px;
+    margin: 15px 0 20px;
+}
+
+.seccion p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.seccion img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* DESTINOS */
+.destino {
+    border-left: 5px solid #a58b55;
+}
+
+.destino h2 {
+    color: #795f35;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: #1d3023;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 10px;
+    color: #d1d1c5;
+}
+
+footer a {
+    display: inline-block;
+    color: #d8c393;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 750px) {
+
+    .menuH {
+        position: relative;
+    }
+
+    .menuH a {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .menuV {
+        width: 100%;
+        position: static;
+    }
+
+    .contenido {
+        width: 100%;
+    }
+
+    .portada h1 {
+        letter-spacing: 5px;
+    }
+
+    .seccion {
+        padding: 22px;
+    }
+}
